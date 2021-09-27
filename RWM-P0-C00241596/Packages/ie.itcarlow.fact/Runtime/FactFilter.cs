@@ -6,6 +6,9 @@ public class FactFilter
 {
     public static int getFact(int x)
     {
+        if (x <= 1)
+            return x;
+
         int total = x;
         while (x > 1)
         {
@@ -17,10 +20,14 @@ public class FactFilter
 
     public static int[] Factorial(int[] arr)
     {
-        int[] result = new int[arr.Length];
-        for (int i = 0; i < arr.Length; i++)
-            result[i] = getFact(arr[i]);
+        if (arr.Length > 0)
+        {
+            int[] result = new int[arr.Length];
+            for (int i = 0; i < arr.Length; i++)
+                result[i] = getFact(arr[i]);
 
-        return result;
+            return result;
+        }
+        return new int[1] { 0};
     }
 }

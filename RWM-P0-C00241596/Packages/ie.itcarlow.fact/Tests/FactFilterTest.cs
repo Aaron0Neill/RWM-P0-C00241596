@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Tests
+namespace FactTests
 {
     public class FactFilterTest
     {
